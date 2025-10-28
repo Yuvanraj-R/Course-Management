@@ -1,0 +1,56 @@
+.persona-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f4f7f6;
+    font-family: sans-serif;
+}
+
+.persona-title {
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.persona-cards {
+    display: flex;
+    gap: 30px;
+}
+
+.persona-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    width: 250px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.persona-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.persona-card h2 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.persona-card p {
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    .persona-cards {
+        flex-direction: column;
+    }
+    .persona-card {
+        width: 80vw;
+    }
+}

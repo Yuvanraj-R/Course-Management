@@ -1,0 +1,124 @@
+/* src/Styles/GitHubRepos.css */
+
+/* Main layout for the GitHub Repos page */
+.github-repos-main-content {
+  padding: 3rem; /* Increased padding for more overall space */
+  flex: 1; /* Allows content to grow */
+  background-color: var(--color-background-light); /* Consistent background */
+  min-height: calc(100vh - 5rem); /* Adjust based on header height, to ensure full background */
+}
+
+.github-repos-section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-primary-blue-dark);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--color-border);
+  text-align: center;
+}
+
+.github-repos-intro-text {
+  font-size: 1.1rem;
+  color: var(--color-text-medium);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Grid for repository cards */
+.repos-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default to single column on very small screens */
+  gap: 1.5rem; /* Space between cards */
+  max-width: 1000px; /* Increased max-width for wider layout */
+  margin: 0 auto; /* Center the grid */
+}
+
+@media (min-width: 768px) { /* On medium screens and up, display two columns */
+  .repos-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  }
+}
+
+/* Individual Repository Card Styling */
+.repo-card {
+  background-color: var(--color-card-background); /* White background */
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-subtle); /* Subtle shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes content and link apart */
+  height: auto; /* Allow height to adjust */
+}
+
+.repo-card:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: var(--shadow-medium); /* More prominent shadow on hover */
+}
+
+.repo-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.github-icon {
+  color: var(--color-primary-blue-dark); /* GitHub icon color */
+  flex-shrink: 0;
+}
+
+.student-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.project-name {
+  font-size: 0.95rem;
+  color: var(--color-text-medium);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  flex-grow: 1; /* Allows project name to take space */
+}
+
+.repo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--color-primary-blue-medium); /* Blue link color */
+  text-decoration: none;
+  font-weight: 500;
+  word-break: break-all; /* Ensures long links break */
+  transition: color 0.2s ease;
+}
+
+.repo-link:hover {
+  color: var(--color-primary-blue-dark); /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+.repo-link .lucide { /* Targeting lucide icons within the link */
+  color: var(--color-primary-blue-medium); /* Ensure icon color matches link */
+  transition: color 0.2s ease;
+}
+
+.repo-link:hover .lucide {
+  color: var(--color-primary-blue-dark);
+}
+
+.external-link-icon {
+  margin-left: 0.25rem; /* Small space after the text link */
+  flex-shrink: 0; /* Prevents icon from shrinking */
+}

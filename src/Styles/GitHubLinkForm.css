@@ -1,0 +1,107 @@
+/* --- GitHub Link Modal Specific Styles --- */
+
+/* You can reuse .modal-overlay and .modal-content from your Assignments.css if they exist */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--color-card-background, #fff);
+  padding: 2.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  position: relative;
+}
+
+.github-modal {
+  max-width: 550px; /* A good width for this form */
+  text-align: center;
+}
+
+.github-modal-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.github-icon {
+  color: var(--color-text-dark, #202124);
+}
+
+.github-modal .modal-question-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary-blue-dark, #2F58CD);
+  margin-bottom: 0.5rem; /* Tighter spacing */
+}
+
+.github-modal-text {
+  font-size: 1rem;
+  color: var(--color-text-medium, #5F6368);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-medium, #5F6368);
+}
+
+.input-group .form-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 3rem; /* Add padding for the icon */
+  border: 1px solid var(--color-border, #DADCE0);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  box-sizing: border-box; /* Important for correct width */
+}
+
+.input-group .form-input:focus {
+  border-color: var(--color-primary-blue-medium, #4285F4);
+  box-shadow: 0 0 0 2px rgba(47, 88, 205, 0.2); /* Using --color-primary-blue-dark-rgb */
+  outline: none;
+}
+
+.error-message {
+  color: var(--color-text-red, #D32F2F);
+  font-size: 0.9rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.submit-button {
+  width: 100%;
+  background-color: var(--color-primary-blue-medium, #4285F4);
+  color: var(--color-text-light, #fff);
+  padding: 0.85rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: var(--color-primary-blue-dark, #2F58CD);
+}
