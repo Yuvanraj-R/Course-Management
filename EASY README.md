@@ -76,7 +76,7 @@ CREATE TABLE users (
 
 step 1 :
 
-the password entering in sql should be a hashed password , so go to this link \[https://bcrypt-generator.com/] or any other hash generator 
+the password entering in sql should be a hashed password , so go to this link https://bcrypt-generator.com or any other hash generator 
 
 STEP 2 :The hashed password should be entered in sql but the original text should be entered inn the original login page.)
 
@@ -213,6 +213,7 @@ step 4 : now go to backend folder -- course platform --- src -- main -- java -- 
 
 
 &nbsp;         NOW THE COURSE MANAGEMENT WEBPAGE OPENS AND YOU ARE READY TO DO ANYTASK IN IT
+
 
 
 
